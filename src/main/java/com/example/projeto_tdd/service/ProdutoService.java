@@ -22,4 +22,16 @@ public class ProdutoService {
     public Produto adicionar(Produto produto) {
         return produto;
     }
+
+    public void deletar(Long id) {
+        // Não há persistência real aqui. Então nada é feito de fato.
+        // Em uma versão real, você chamaria algo como repository.deleteById(id)
+        System.out.println("Produto com id " + id + " deletado (mock).");
+    }
+
+    public Produto atualizar(Long id, Produto produto) {
+        produto.setId(id);
+        return produto;
+    }
+
 }
